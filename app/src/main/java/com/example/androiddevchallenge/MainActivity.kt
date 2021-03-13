@@ -16,13 +16,17 @@
 package com.example.androiddevchallenge
 
 import android.os.Bundle
+import android.view.Window
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.core.view.WindowCompat
 import com.example.androiddevchallenge.ui.theme.MyTheme
 
 class MainActivity : AppCompatActivity() {
@@ -30,10 +34,18 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme {
+                setStatusBarTransparent(window, MaterialTheme.colors.isLight)
                 MyApp()
             }
         }
     }
+}
+
+fun setStatusBarTransparent(window: Window, lightTheme: Boolean) {
+    window.statusBarColor = Color.Transparent.toArgb()
+    WindowCompat.getInsetsController(window, window.decorView)
+        ?.isAppearanceLightStatusBars = lightTheme
+    WindowCompat.setDecorFitsSystemWindows(window, false)
 }
 
 // Start building your app here!
