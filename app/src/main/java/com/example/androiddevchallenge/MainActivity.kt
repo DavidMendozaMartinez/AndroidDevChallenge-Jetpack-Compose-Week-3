@@ -21,7 +21,6 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
@@ -45,6 +44,7 @@ fun setStatusBarTransparent(window: Window, lightTheme: Boolean) {
     window.statusBarColor = Color.Transparent.toArgb()
     WindowCompat.getInsetsController(window, window.decorView)
         ?.isAppearanceLightStatusBars = lightTheme
+    WindowCompat.getInsetsController(window, window.decorView)
     WindowCompat.setDecorFitsSystemWindows(window, false)
 }
 
@@ -52,7 +52,7 @@ fun setStatusBarTransparent(window: Window, lightTheme: Boolean) {
 @Composable
 fun MyApp() {
     Surface(color = MaterialTheme.colors.background) {
-        Text(text = "Ready... Set... GO!")
+        Navigation()
     }
 }
 

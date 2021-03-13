@@ -10,4 +10,23 @@
       the License.
       -->
     <string name="app_name">AndroidDevChallenge</string>
+
+    <string name="logo_content_description">MySoothe logotype</string>
+
+    <string name="sign_up">Sign up</string>
+    <string name="log_in">Log in</string>
+
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+
+    <string name="sign_up_message_first">Don\'t have an account?\u0020</string>
+    <string name="sign_up_message_second">Sign up</string>
+
+    <string name="search">Search</string>
+    <string name="favorite_collections">Favorite collections</string>
+    <string name="align_your_body">Align your body</string>
+    <string name="align_your_mind">Align your mind</string>
+
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
 </resources>
